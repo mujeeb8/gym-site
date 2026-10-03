@@ -375,25 +375,30 @@
     };
     const resetTyping = (element) => {
       window.clearInterval(typeTimers.get(element));
-      element.querySelectorAll('.type-character').forEach((character) => character.classList.remove('is-typed'));
       element.querySelectorAll('[data-count-up]').forEach((counter) => {
         window.clearInterval(countTimers.get(counter));
         counter.textContent = '0.0';
       });
       updateRatingStars(element, 0);
     };
+    const resetTextTyping = (element) => {
+      window.clearInterval(typeTimers.get(element));
+      element.querySelectorAll('.type-character').forEach((character) => character.classList.remove('is-typed'));
+    };
     const startTyping = (element) => {
       resetTyping(element);
       const characters = element.querySelectorAll('.type-character');
-      let index = 0;
-      typeTimers.set(element, window.setInterval(() => {
-        if (index >= characters.length) {
-          window.clearInterval(typeTimers.get(element));
-          return;
-        }
-        characters[index].classList.add('is-typed');
-        index += 1;
-      }, 12));
+      let index = Array.from(characters).findIndex((character) => !character.classList.contains('is-typed'));
+      if (index !== -1) {
+        typeTimers.set(element, window.setInterval(() => {
+          if (index >= characters.length) {
+            window.clearInterval(typeTimers.get(element));
+            return;
+          }
+          characters[index].classList.add('is-typed');
+          index += 1;
+        }, Number(element.dataset.typingSpeed) || 12));
+      }
       element.querySelectorAll('[data-count-up]').forEach((counter) => {
         const target = Number(counter.dataset.countUp);
         const start = performance.now();
@@ -408,6 +413,7 @@
     };
 
     document.querySelectorAll('a, button').forEach((control) => control.classList.add('reveal'));
+    document.querySelectorAll('#home h1.reveal').forEach((element) => { element.dataset.typingSpeed = '40'; });
     const revealElements = [...document.querySelectorAll('.reveal')];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reducedMotion) {
@@ -425,7 +431,8 @@
           entry.target.classList.add('is-visible');
           if (!reducedMotion) startTyping(entry.target);
         } else if (entry.intersectionRatio === 0 && !reducedMotion) {
-          resetTyping(entry.target);
+          if (entry.target.closest('#home')) resetTextTyping(entry.target);
+          else resetTyping(entry.target);
         }
       });
     }, { threshold: [0, 0.12], rootMargin: '0px 0px -36px 0px' });
