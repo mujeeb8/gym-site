@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171914">
+  <meta name="description" content="Train at Shahid International Gym in Shakrial, Rawalpindi. Explore martial arts, self-defence, ladies' classes, corrective exercise and online classes.">
+  <title>Shahid International Gym | Shakrial, Rawalpindi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#171914',
+            paper: '#f2f0e9',
+            lime: '#d9ff50',
+            muted: '#777970'
+          },
+          fontFamily: {
+            display: ['Barlow Condensed', 'sans-serif'],
+            body: ['DM Sans', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #171914;
+      --paper: #f2f0e9;
+      --lime: #d9ff50;
+      --muted: #777970;
+    }
+
+    html { font-size: 15px; scroll-behavior: smooth; scroll-padding-top: 5rem; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; }
+    h1, h2, h3, .display { font-family: 'Barlow Condensed', sans-serif; }
+    ::selection { color: var(--ink); background: var(--lime); }
+    .hero-image {
+      background-image: linear-gradient(90deg, rgba(13, 15, 12, .82) 0%, rgba(13, 15, 12, .53) 45%, rgba(13, 15, 12, .12) 100%), linear-gradient(0deg, rgba(13, 15, 12, .52), transparent 48%), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2200&q=88');
+      background-size: cover;
+      background-position: center 53%;
+    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .12s; }
+    .reveal-delay-2 { transition-delay: .22s; }
+    .reveal-delay-3 { transition-delay: .32s; }
+    .type-character { opacity: 0; }
+    .type-character.is-typed { opacity: 1; }
+    .type-word { white-space: nowrap; }
+    .rating-stars { display: inline-flex; gap: .06em; }
+    .rating-value { flex: 0 0 3ch; min-width: 3ch; text-align: right; font-variant-numeric: tabular-nums; }
+    .rating-star {
+      display: inline-block;
+      color: transparent;
+      background: linear-gradient(90deg, #b18413 var(--fill, 0%), rgba(177, 132, 19, .24) var(--fill, 0%));
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    .footer-icon { filter: brightness(0) invert(1); transition: filter .2s ease; }
+    .footer-contact-link:hover .footer-icon { filter: brightness(0); }
+    .site-header { transition: background-color .25s ease, box-shadow .25s ease; }
+    .site-header.is-scrolled { background-color: rgba(23, 25, 20, .96); box-shadow: 0 1px 0 rgba(255,255,255,.12); }
+    .program-item { transition: color .2s ease, background-color .2s ease, padding .2s ease; }
+    .program-item:hover { padding-left: 1.1rem; color: var(--ink); background-color: var(--lime); }
+    .arrow-link svg { transition: transform .2s ease; }
+    .arrow-link:hover svg { transform: translate(3px, -3px); }
+    .menu-open { overflow: hidden; }
+    @media (max-width: 639px) {
+      #mobile-menu { text-align: center; }
+      #mobile-menu > a:last-child { margin-inline: auto; }
+      main > section { text-align: center; }
+      #home > div > div:first-child { margin-inline: auto; }
+      #home .reveal-delay-2 > p { margin-inline: auto; }
+      #home .reveal-delay-2 > div { justify-content: center; }
+      #home .reveal-delay-3 { justify-content: center; }
+      [aria-label="Gym information"] .grid > div { justify-content: flex-start; text-align: left; }
+      #about > div:first-child > p { left: 50%; transform: translateX(-50%); }
+      #about > div:last-child { align-items: center; }
+      #about .reveal-delay-3 > div { text-align: center; }
+      #about .arrow-link { margin-inline: auto; }
+      #training .mb-12 > p { margin-inline: auto; }
+      #training .program-item { position: relative; justify-content: flex-start; padding-inline: 1rem 2.5rem; text-align: left; }
+      #training .program-item > span:first-child { max-width: 100%; min-width: 0; margin-inline: 0; }
+      #training .program-item > span:first-child > span:last-child { min-width: 0; }
+      #training .program-item > span:last-child { position: absolute; right: .25rem; width: 1.25rem; text-align: center; }
+      #training .border-l-2 { align-items: center; }
+      #training .border-l-2 > * { margin-inline: auto; text-align: center; }
+      [aria-label="Member feedback and gym photo"] > div:first-child { align-items: center; }
+      [aria-label="Member feedback and gym photo"] .reveal.flex.items-end { justify-content: center; }
+      [aria-label="Member feedback and gym photo"] .reveal.max-w-\[410px\] { margin-inline: auto; }
+      [aria-label="Member feedback and gym photo"] .arrow-link { margin-inline: auto; }
+      [aria-label="Member feedback and gym photo"] > div:last-child > p { left: 50%; transform: translateX(-50%); }
+      #visit > div > div:first-child { align-items: center; }
+      #visit > div > div:first-child > p { margin-inline: auto; }
+      #visit .reveal-delay-3 { justify-content: center; }
+      #visit .reveal.flex.gap-5,
+      #visit .reveal.grid > .flex.gap-5 { flex-direction: column; align-items: center; text-align: center; }
+      #visit .reveal.flex.gap-5 > div,
+      #visit .reveal.grid > .flex.gap-5 > div { width: 100%; }
+      #visit .arrow-link { margin-inline: auto; }
+      #visit dl > div { text-align: left; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+      .type-character { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="font-body antialiased">
+  <header class="site-header fixed inset-x-0 top-0 z-50 text-white" id="site-header">
+    <div class="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
+      <a href="#home" class="group flex items-center gap-3" aria-label="Shahid International Gym home">
+        <span class="grid h-10 w-10 place-items-center bg-lime text-ink">
+          <svg viewBox="0 0 32 32" class="h-6 w-6" fill="none" aria-hidden="true"><path d="M4 12v8m5-11v14m14-14v14m5-11v8M9 16h14" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg>
+        </span>
+        <span class="leading-none"><span class="block text-[10px] font-bold uppercase tracking-[0.12em] text-white/65">Shakrial · Rawalpindi</span><span class="mt-1 block text-sm font-bold text-white">Shahid International Gym</span></span>
+      </a>
+      <nav class="hidden items-center gap-8 text-[12px] font-semibold md:flex" aria-label="Main navigation">
+        <a class="transition-colors hover:text-lime" href="#training">Training</a>
+        <a class="transition-colors hover:text-lime" href="#about">About</a>
+        <a class="transition-colors hover:text-lime" href="#visit">Find us</a>
+        <a class="border border-lime px-5 py-3 text-lime transition-colors hover:bg-lime hover:text-ink" href="tel:+923079658358">Call the gym <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="grid h-11 w-11 place-items-center border border-white/35 text-white md:hidden" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="menu-icon" viewBox="0 0 24 24" class="h-6 w-6" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden border-t border-white/15 bg-ink px-5 pb-6 pt-3 md:hidden" aria-label="Mobile navigation">
+      <a class="block border-b border-white/10 py-4 text-sm" href="#training">Training</a>
+      <a class="block border-b border-white/10 py-4 text-sm" href="#about">About</a>
+      <a class="block border-b border-white/10 py-4 text-sm" href="#visit">Find us</a>
+      <a class="mt-5 inline-flex bg-lime px-5 py-3 text-sm font-bold text-ink" href="tel:+923079658358">Call 0307 9658358</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-image relative flex min-h-[680px] items-end overflow-hidden bg-ink text-white sm:min-h-[760px] md:min-h-[100svh]" id="home">
+      <div class="absolute inset-0" aria-hidden="true"></div>
+      <div class="relative mx-auto w-full max-w-[1440px] px-5 pb-16 pt-36 sm:px-8 sm:pb-20 md:pb-10 md:pt-20 lg:px-12 lg:pt-16">
+        <div class="max-w-[900px]">
+          <p class="reveal mb-5 text-xs font-bold uppercase tracking-[0.14em] text-lime sm:text-sm">Strength · Skill · Self-belief</p>
+          <h1 class="reveal reveal-delay-1 max-w-[900px] text-[2.75rem] font-extrabold uppercase leading-[.81] min-[360px]:text-[3.25rem] sm:text-8xl lg:text-[8rem]">Shahid<br><span class="text-lime">International</span><br>Gym</h1>
+          <div class="reveal reveal-delay-2 mt-8 flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between md:mt-6">
+            <p class="max-w-[380px] text-base leading-7 text-white/80 sm:text-lg">Build strength, learn a skill and find a training rhythm that works for you. Your next session starts here.</p>
+            <div class="flex flex-wrap gap-3">
+              <a class="inline-flex min-h-14 items-center gap-4 bg-lime px-6 text-sm font-bold text-ink transition-colors hover:bg-white" href="#training">Explore training <span aria-hidden="true">↓</span></a>
+              <a class="inline-flex min-h-14 items-center border border-white/60 px-6 text-sm font-bold text-white transition-colors hover:border-white hover:bg-white hover:text-ink" href="https://wa.me/923079658358?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20training%20at%20Shahid%20International%20Gym." target="_blank" rel="noreferrer">Message us <span class="ml-3" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-3 mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/30 pt-5 text-xs font-semibold uppercase tracking-[0.08em] text-white/75 sm:mt-20 md:mt-12">
+          <span>Shakrial, Rawalpindi</span><span class="hidden h-1 w-1 bg-lime sm:block" aria-hidden="true"></span><span>Separate halls for ladies &amp; gents</span><span class="hidden h-1 w-1 bg-lime sm:block" aria-hidden="true"></span><a class="text-white transition-colors hover:text-lime" href="https://www.google.com/search?q=Shahid+International+Gym+Rawalpindi+reviews" target="_blank" rel="noreferrer" aria-label="See Shahid International Gym's Google reviews">4.7 / 5 on Google ↗</a>
+        </div>
+      </div>
+      <span class="reveal pointer-events-none absolute right-5 top-1/2 hidden -translate-y-1/2 font-display text-[11px] font-bold uppercase tracking-[0.14em] text-white/55 [writing-mode:vertical-rl] lg:block">Train with purpose</span>
+    </section>
+
+    <section class="bg-lime" aria-label="Gym information">
+      <div class="mx-auto grid max-w-[1440px] grid-cols-1 divide-y divide-ink/20 px-5 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:px-8 lg:px-12">
+        <div class="reveal flex items-center gap-4 py-6 sm:py-7"><span class="font-display text-4xl font-bold">01</span><span class="text-sm font-semibold">Shakrial, Rawalpindi<br><span class="font-normal text-ink/65">46000, Pakistan</span></span></div>
+        <div class="reveal reveal-delay-1 flex items-center gap-4 py-6 sm:px-7 sm:py-7"><span class="font-display text-4xl font-bold">02</span><span class="text-sm font-semibold">Open until 11:00 PM<br><span class="font-normal text-ink/65">Listed closing time · confirm today's hours</span></span></div>
+        <div class="reveal reveal-delay-2 flex items-center gap-4 py-6 sm:px-7 sm:py-7"><span class="font-display text-4xl font-bold">03</span><span class="text-sm font-semibold">Online classes available<br><span class="font-normal text-ink/65">Ask the team about current sessions</span></span></div>
+      </div>
+    </section>
+
+    <section class="mx-auto grid max-w-[1440px] gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[.85fr_1.15fr] lg:gap-20 lg:px-12" id="about">
+      <div class="reveal relative min-h-[380px] overflow-hidden bg-ink sm:min-h-[500px]">
+        <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1200&q=85" alt="Athlete training with free weights in a gym" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"></div>
+        <p class="absolute bottom-6 left-6 max-w-[220px] font-display text-4xl font-bold uppercase leading-[.9] text-white sm:bottom-8 sm:left-8">Train for<br>what matters.</p>
+        <span class="absolute right-0 top-0 bg-lime px-5 py-4 font-display text-2xl font-bold">S.I.G.</span>
+      </div>
+      <div class="flex flex-col justify-center lg:py-10">
+        <p class="reveal mb-4 text-xs font-bold uppercase tracking-[0.14em] text-muted">A place to get stronger</p>
+        <h2 class="reveal reveal-delay-1 max-w-[650px] text-5xl font-bold uppercase leading-[.92] sm:text-7xl">More than a workout.<br><span class="text-[#849e22]">A skill for life.</span></h2>
+        <p class="reveal reveal-delay-2 mt-7 max-w-[590px] text-base leading-7 text-[#55574f]">Shahid International Gym brings strength training and practical disciplines together in Shakrial. With separate halls for ladies and gents, the gym offers room to work toward your goals in a setting that fits your training.</p>
+        <div class="reveal reveal-delay-3 mt-9 grid max-w-[590px] grid-cols-1 border-y border-ink/20 sm:grid-cols-2">
+          <div class="border-b border-ink/20 py-5 sm:border-b-0 sm:border-r sm:pr-5"><span class="block font-display text-3xl font-bold uppercase">All levels</span><span class="mt-1 block text-sm text-muted">Start where you are</span></div>
+          <div class="py-5 sm:pl-5"><span class="block font-display text-3xl font-bold uppercase">Multiple disciplines</span><span class="mt-1 block text-sm text-muted">Find your way to move</span></div>
+        </div>
+        <a class="reveal arrow-link mt-8 inline-flex w-fit items-center gap-3 border-b-2 border-ink pb-2 text-sm font-bold" href="#visit">Plan a visit <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" aria-hidden="true"><path d="M4 16 16 4M6 4h10v10" stroke="currentColor" stroke-width="1.7"/></svg></a>
+      </div>
+    </section>
+
+    <section class="bg-ink py-20 text-white sm:py-28" id="training">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
+        <div class="mb-12 grid gap-5 sm:mb-16 sm:grid-cols-[1fr_auto] sm:items-end">
+          <div>
+            <p class="reveal mb-4 text-xs font-bold uppercase tracking-[0.14em] text-lime">Train your way</p>
+            <h2 class="reveal reveal-delay-1 text-5xl font-bold uppercase leading-[.9] sm:text-7xl">Find your<br class="sm:hidden"> discipline.</h2>
+          </div>
+          <p class="reveal reveal-delay-2 max-w-[340px] text-sm leading-6 text-white/60">From martial arts to movement and recovery, explore the training options listed by the gym.</p>
+        </div>
+        <div class="grid border-t border-white/20 md:grid-cols-2 md:gap-x-12">
+          <a class="program-item reveal flex min-h-[94px] items-center justify-between border-b border-white/20 px-1" href="https://wa.me/923079658358?text=Hi%2C%20I%27d%20like%20to%20know%20about%20Karate%20classes." target="_blank" rel="noreferrer"><span class="flex items-center gap-5"><span class="font-display text-base text-lime">01</span><span class="font-display text-3xl font-semibold uppercase sm:text-4xl">Kyokushin Karate</span></span><span class="text-xl text-lime" aria-hidden="true">↗</span></a>
+          <a class="program-item reveal reveal-delay-1 flex min-h-[94px] items-center justify-between border-b border-white/20 px-1" href="https://wa.me/923079658358?text=Hi%2C%20I%27d%20like%20to%20know%20about%20self-defence%20classes." target="_blank" rel="noreferrer"><span class="flex items-center gap-5"><span class="font-display text-base text-lime">02</span><span class="font-display text-3xl font-semibold uppercase sm:text-4xl">Self-defence</span></span><span class="text-xl text-lime" aria-hidden="true">↗</span></a>
+          <a class="program-item reveal flex min-h-[94px] items-center justify-between border-b border-white/20 px-1" href="https://wa.me/923079658358?text=Hi%2C%20I%27d%20like%20to%20know%20about%20MMA%20training." target="_blank" rel="noreferrer"><span class="flex items-center gap-5"><span class="font-display text-base text-lime">03</span><span class="font-display text-3xl font-semibold uppercase sm:text-4xl">MMA</span></span><span class="text-xl text-lime" aria-hidden="true">↗</span></a>
+          <a class="program-item reveal reveal-delay-1 flex min-h-[94px] items-center justify-between border-b border-white/20 px-1" href="https://wa.me/923079658358?text=Hi%2C%20I%27d%20like%20to%20know%20about%20ladies%27%20classes." target="_blank" rel="noreferrer"><span class="flex items-center gap-5"><span class="font-display text-base text-lime">04</span><span class="font-display text-3xl font-semibold uppercase sm:text-4xl">Ladies' group classes</span></span><span class="text-xl text-lime" aria-hidden="true">↗</span></a>
+          <a class="program-item reveal flex min-h-[94px] items-center justify-between border-b border-white/20 px-1" href="https://wa.me/923079658358?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20corrective%20exercise." target="_blank" rel="noreferrer"><span class="flex items-center gap-5"><span class="font-display text-base text-lime">05</span><span class="font-display text-3xl font-semibold uppercase sm:text-4xl">Corrective exercise</span></span><span class="text-xl text-lime" aria-hidden="true">↗</span></a>
+          <a class="program-item reveal reveal-delay-1 flex min-h-[94px] items-center justify-between border-b border-white/20 px-1" href="https://wa.me/923079658358?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20diet%20and%20exercise%20consultancy." target="_blank" rel="noreferrer"><span class="flex items-center gap-5"><span class="font-display text-base text-lime">06</span><span class="font-display text-3xl font-semibold uppercase sm:text-4xl">Diet &amp; exercise advice</span></span><span class="text-xl text-lime" aria-hidden="true">↗</span></a>
+        </div>
+        <div class="reveal mt-8 flex flex-col gap-4 border-l-2 border-lime pl-5 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm leading-6 text-white/70">Cardio, Tabata, Zumba and circuit training are also listed for ladies, alongside online classes.</p>
+          <a class="arrow-link inline-flex shrink-0 items-center gap-3 text-sm font-bold text-lime" href="https://wa.me/923079658358?text=Hi%2C%20can%20you%20tell%20me%20about%20your%20current%20classes%3F" target="_blank" rel="noreferrer">Ask about classes <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" aria-hidden="true"><path d="M4 16 16 4M6 4h10v10" stroke="currentColor" stroke-width="1.7"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid bg-[#e4e2d9] lg:grid-cols-2" aria-label="Member feedback and gym photo">
+      <div class="flex min-h-[340px] flex-col justify-center px-5 py-16 sm:px-12 lg:px-16 xl:px-24">
+        <p class="reveal text-xs font-bold uppercase tracking-[0.14em] text-muted">Rated by the community</p>
+        <div class="reveal reveal-delay-1 mt-5 flex items-end gap-4"><span class="rating-value font-display text-8xl font-bold leading-[.8] sm:text-9xl" data-count-up="4.7">4.7</span><span class="rating-stars pb-1 text-2xl" data-rating-stars aria-label="4.7 out of 5 stars"><span class="rating-star" aria-hidden="true">★</span><span class="rating-star" aria-hidden="true">★</span><span class="rating-star" aria-hidden="true">★</span><span class="rating-star" aria-hidden="true">★</span><span class="rating-star" aria-hidden="true">★</span></span></div>
+        <p class="reveal reveal-delay-2 mt-5 max-w-[410px] text-sm leading-6 text-[#55574f]">A 4.7 out of 5 rating on Google. Read the latest reviews and decide if Shahid International Gym feels right for you.</p>
+        <a class="reveal arrow-link mt-7 inline-flex w-fit items-center gap-3 border-b-2 border-ink pb-2 text-sm font-bold" href="https://www.google.com/search?q=Shahid+International+Gym+Rawalpindi+reviews" target="_blank" rel="noreferrer">Read Google reviews <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" aria-hidden="true"><path d="M4 16 16 4M6 4h10v10" stroke="currentColor" stroke-width="1.7"/></svg></a>
+      </div>
+      <div class="reveal relative min-h-[320px] overflow-hidden bg-ink lg:min-h-[450px]">
+        <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1400&q=85" alt="Training space with strength and fitness equipment" loading="lazy">
+        <div class="absolute inset-0 bg-ink/15"></div>
+        <p class="absolute bottom-6 left-6 max-w-[260px] font-display text-4xl font-bold uppercase leading-[.9] text-white sm:bottom-9 sm:left-9">Stronger, together.</p>
+      </div>
+    </section>
+
+    <section class="bg-paper py-20 sm:py-28" id="visit">
+      <div class="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-20 lg:px-12">
+        <div>
+          <p class="reveal mb-4 text-xs font-bold uppercase tracking-[0.14em] text-muted">Come through</p>
+          <h2 class="reveal reveal-delay-1 max-w-[700px] text-6xl font-bold uppercase leading-[.86] sm:text-8xl">Your next<br>session is<br><span class="text-[#849e22]">waiting.</span></h2>
+          <p class="reveal reveal-delay-2 mt-7 max-w-[440px] text-base leading-7 text-[#55574f]">Call ahead to ask about today's hours, class availability or what to bring for your first visit.</p>
+          <div class="reveal reveal-delay-3 mt-8 flex flex-wrap gap-3">
+            <a class="inline-flex min-h-14 items-center gap-3 bg-ink px-6 text-sm font-bold text-white transition-colors hover:bg-[#363a2e]" href="tel:+923079658358"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" aria-hidden="true"><path d="M6.2 2.5H4a1.5 1.5 0 0 0-1.5 1.6c.5 7.1 6.3 12.9 13.4 13.4a1.5 1.5 0 0 0 1.6-1.5v-2.2a1.5 1.5 0 0 0-1.2-1.5l-2.5-.5a1.5 1.5 0 0 0-1.5.6l-.6.8a12 12 0 0 1-4.4-4.4l.8-.6a1.5 1.5 0 0 0 .6-1.5l-.5-2.5a1.5 1.5 0 0 0-1.5-1.2Z" stroke="currentColor" stroke-width="1.5"/></svg>0307 9658358</a>
+            <a class="inline-flex min-h-14 items-center gap-3 border border-ink px-6 text-sm font-bold transition-colors hover:bg-lime" href="https://wa.me/923079658358?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20Shahid%20International%20Gym." target="_blank" rel="noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="border-t border-ink/20 lg:mt-5">
+          <div class="reveal grid gap-5 border-b border-ink/20 py-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center">
+            <div class="flex gap-5">
+            <svg viewBox="0 0 24 24" class="mt-1 h-5 w-5 shrink-0" fill="none" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div><h3 class="font-display text-2xl font-bold uppercase">Find the gym</h3><p class="mt-2 text-sm leading-6 text-[#55574f]">Shakrial, Rawalpindi, 46000<br>Pakistan</p><a class="arrow-link mt-3 inline-flex items-center gap-2 text-sm font-bold" href="https://www.google.com/maps/search/?api=1&query=Shahid+International+Gym%2C+Shakrial%2C+Rawalpindi" target="_blank" rel="noreferrer">Get directions <span aria-hidden="true">↗</span></a></div>
+            </div>
+            <iframe class="mt-5 block h-[260px] w-full border-0 bg-[#e6e7e1] sm:h-[300px] lg:mt-0 lg:h-[190px]" src="https://maps.google.com/maps?q=33.6293031%2C73.1063122&z=16&output=embed" title="Map pin for Shahid International Gym in Shakrial, Rawalpindi" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <div class="reveal flex gap-5 border-b border-ink/20 py-6">
+            <svg viewBox="0 0 24 24" class="mt-1 h-5 w-5 shrink-0" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+            <div><h3 class="font-display text-2xl font-bold uppercase">Opening information</h3><p class="mt-2 text-sm leading-6 text-[#55574f]">Hours: 6:00 AM–11:00 PM daily, with a Friday break from 12:00 PM to 2:00 PM.</p><dl class="mt-4 divide-y divide-ink/15 border-y border-ink/15 text-sm"><div class="flex justify-between gap-4 py-2.5"><dt>Monday</dt><dd class="text-right text-muted">6:00 AM–11:00 PM</dd></div><div class="flex justify-between gap-4 py-2.5"><dt>Tuesday</dt><dd class="text-right text-muted">6:00 AM–11:00 PM</dd></div><div class="flex justify-between gap-4 py-2.5"><dt>Wednesday</dt><dd class="text-right text-muted">6:00 AM–11:00 PM</dd></div><div class="flex justify-between gap-4 py-2.5"><dt>Thursday</dt><dd class="text-right text-muted">6:00 AM–11:00 PM</dd></div><div class="flex justify-between gap-4 py-2.5"><dt>Friday</dt><dd class="text-right text-muted">6:00 AM–12:00 PM<br>2:00 PM–11:00 PM</dd></div><div class="flex justify-between gap-4 py-2.5"><dt>Saturday</dt><dd class="text-right text-muted">6:00 AM–11:00 PM</dd></div><div class="flex justify-between gap-4 py-2.5"><dt>Sunday</dt><dd class="text-right text-muted">6:00 AM–11:00 PM</dd></div></dl></div>
+          </div>
+          <div class="reveal flex gap-5 py-6">
+            <svg viewBox="0 0 24 24" class="mt-1 h-5 w-5 shrink-0" fill="none" aria-hidden="true"><path d="M4 5h16v11H8l-4 3V5Z" stroke="currentColor" stroke-width="1.6"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div><h3 class="font-display text-2xl font-bold uppercase">Stay in touch</h3><p class="mt-2 text-sm leading-6 text-[#55574f]">For classes, online sessions and membership questions.</p><a class="arrow-link mt-3 inline-flex items-center gap-2 text-sm font-bold" href="https://www.facebook.com/ShahidInternationalGym" target="_blank" rel="noreferrer">Facebook page <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white">
+    <div class="mx-auto grid max-w-[1440px] gap-9 px-5 py-10 sm:px-8 sm:py-12 md:grid-cols-2 lg:grid-cols-[1fr_auto_auto] lg:items-center lg:px-12">
+      <div class="text-center sm:text-left">
+        <a href="#home" class="reveal mx-auto flex w-fit items-center gap-3 sm:mx-0"><span class="grid h-10 w-10 place-items-center bg-lime text-ink"><svg viewBox="0 0 32 32" class="h-6 w-6" fill="none" aria-hidden="true"><path d="M4 12v8m5-11v14m14-14v14m5-11v8M9 16h14" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg></span><span class="text-sm font-bold">Shahid International Gym</span></a>
+        <p class="reveal reveal-delay-1 mt-4 text-sm leading-6 text-white/65">Shakrial, Rawalpindi 46000<br>Train with purpose. Find your pace.</p>
+      </div>
+      <div class="text-center sm:text-left">
+        <h2 class="reveal mb-3 text-xs font-bold uppercase tracking-[0.12em] text-white/55">Get in touch</h2>
+        <div class="flex flex-wrap justify-center gap-2 sm:justify-start">
+          <a class="footer-contact-link reveal inline-flex min-h-11 items-center gap-2 border border-white/25 px-3 text-sm font-semibold transition-colors hover:border-lime hover:bg-lime hover:text-ink" href="tel:+923079658358" aria-label="Call Shahid International Gym at 0307 9658358">
+            <img class="footer-icon h-5 w-5 shrink-0" src="https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/phone.svg" alt="" aria-hidden="true">
+            <span>0307 9658358</span>
+          </a>
+          <a class="footer-contact-link reveal reveal-delay-1 inline-flex min-h-11 items-center gap-2 border border-white/25 px-3 text-sm font-semibold transition-colors hover:border-lime hover:bg-lime hover:text-ink" href="https://wa.me/923079658358?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20Shahid%20International%20Gym." target="_blank" rel="noreferrer" aria-label="Message Shahid International Gym on WhatsApp">
+            <img class="footer-icon h-5 w-5 shrink-0" src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="" aria-hidden="true">
+            <span>WhatsApp</span>
+          </a>
+          <a class="footer-contact-link reveal reveal-delay-2 inline-flex min-h-11 items-center gap-2 border border-white/25 px-3 text-sm font-semibold transition-colors hover:border-lime hover:bg-lime hover:text-ink" href="https://www.facebook.com/ShahidInternationalGym" target="_blank" rel="noreferrer" aria-label="Visit Shahid International Gym on Facebook">
+            <img class="footer-icon h-5 w-5 shrink-0" src="https://cdn.simpleicons.org/facebook/FFFFFF" alt="" aria-hidden="true">
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-4 border-t border-white/15 pt-5 text-center sm:flex-row sm:justify-between md:col-span-2 lg:col-span-1 lg:flex-col lg:items-end lg:border-0 lg:pt-0 lg:text-right">
+        <p class="reveal max-w-[360px] text-xs leading-5 text-white/45">Business details based on its public listing. Hours and classes may change; please confirm directly.</p>
+        <a class="reveal reveal-delay-1 shrink-0 text-xs font-semibold text-lime hover:text-white" href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('#site-header');
+    const menuButton = document.querySelector('#menu-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+    const menuIcon = document.querySelector('#menu-icon');
+
+    const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+      mobileMenu.classList.toggle('hidden', isOpen);
+      document.body.classList.toggle('menu-open', !isOpen);
+      menuIcon.innerHTML = isOpen
+        ? '<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8"/>'
+        : '<path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8"/>';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open menu');
+        mobileMenu.classList.add('hidden');
+        document.body.classList.remove('menu-open');
+        menuIcon.innerHTML = '<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8"/>';
+      });
+    });
+
+    const wrapTextCharacters = (element) => {
+      const links = element.matches('a') ? [element] : [...element.querySelectorAll('a')];
+      links.forEach((link) => {
+        if (link.hasAttribute('aria-label')) return;
+        const labelSource = link.cloneNode(true);
+        labelSource.querySelectorAll('svg, [aria-hidden="true"]').forEach((decoration) => decoration.remove());
+        link.setAttribute('aria-label', labelSource.textContent.replace(/\s+/g, ' ').trim());
+      });
+      const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+          if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+          if (node.parentElement.closest('svg, [aria-hidden="true"], [data-count-up]')) return NodeFilter.FILTER_REJECT;
+          if (!element.matches('a, button') && node.parentElement.closest('a, button')) return NodeFilter.FILTER_REJECT;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      const textNodes = [];
+      while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+      textNodes.forEach((textNode) => {
+        const fragment = document.createDocumentFragment();
+        let word = document.createElement('span');
+        word.className = 'type-word';
+        for (const character of textNode.nodeValue) {
+          const span = document.createElement('span');
+          span.className = 'type-character';
+          span.textContent = character;
+          if (/\s/.test(character)) {
+            if (word.childNodes.length) fragment.append(word);
+            word = document.createElement('span');
+            word.className = 'type-word';
+            fragment.append(span);
+          } else {
+            word.append(span);
+          }
+        }
+        if (word.childNodes.length) fragment.append(word);
+        const textWrapper = document.createElement('span');
+        textWrapper.className = 'type-text';
+        textWrapper.append(fragment);
+        textNode.replaceWith(textWrapper);
+      });
+    };
+
+    const typeTimers = new WeakMap();
+    const countTimers = new WeakMap();
+    const updateRatingStars = (element, rating) => {
+      element.querySelectorAll('[data-rating-stars] .rating-star').forEach((star, index) => {
+        const fill = Math.max(0, Math.min(1, rating - index));
+        star.style.setProperty('--fill', `${fill * 100}%`);
+      });
+    };
+    const resetTyping = (element) => {
+      window.clearInterval(typeTimers.get(element));
+      element.querySelectorAll('.type-character').forEach((character) => character.classList.remove('is-typed'));
+      element.querySelectorAll('[data-count-up]').forEach((counter) => {
+        window.clearInterval(countTimers.get(counter));
+        counter.textContent = '0.0';
+      });
+      updateRatingStars(element, 0);
+    };
+    const startTyping = (element) => {
+      resetTyping(element);
+      const characters = element.querySelectorAll('.type-character');
+      let index = 0;
+      typeTimers.set(element, window.setInterval(() => {
+        if (index >= characters.length) {
+          window.clearInterval(typeTimers.get(element));
+          return;
+        }
+        characters[index].classList.add('is-typed');
+        index += 1;
+      }, 12));
+      element.querySelectorAll('[data-count-up]').forEach((counter) => {
+        const target = Number(counter.dataset.countUp);
+        const start = performance.now();
+        countTimers.set(counter, window.setInterval(() => {
+          const progress = Math.min((performance.now() - start) / 1690, 1);
+          const easedProgress = 1 - (1 - progress) ** 3;
+          counter.textContent = (target * easedProgress).toFixed(1);
+          updateRatingStars(element, target * easedProgress);
+          if (progress === 1) window.clearInterval(countTimers.get(counter));
+        }, 16));
+      });
+    };
+
+    document.querySelectorAll('a, button').forEach((control) => control.classList.add('reveal'));
+    const revealElements = [...document.querySelectorAll('.reveal')];
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reducedMotion) {
+      revealElements.forEach(wrapTextCharacters);
+      document.querySelectorAll('[data-count-up]').forEach((counter) => { counter.textContent = '0.0'; });
+    } else {
+      document.querySelectorAll('[data-count-up]').forEach((counter) => {
+        updateRatingStars(counter.closest('.reveal'), Number(counter.dataset.countUp));
+      });
+    }
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio >= 0.12) {
+          entry.target.classList.add('is-visible');
+          if (!reducedMotion) startTyping(entry.target);
+        } else if (entry.intersectionRatio === 0 && !reducedMotion) {
+          resetTyping(entry.target);
+        }
+      });
+    }, { threshold: [0, 0.12], rootMargin: '0px 0px -36px 0px' });
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+  </script>
+</body>
+</html>
